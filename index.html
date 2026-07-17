@@ -1,15 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Armstrong Lian's Website</title>
-  </head>
-  <body>
-    <h1>Hello, world! I'm Armstrong Lian. 👋</h1>
-    <p>This is my corner of the internet.</p>
-    <p>Built at the CS@Mines summer program. Check back this afternoon, it's about to get way better.
-      wooooooooooooooooooooooooooooo
-    </p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- your name goes in the browser tab title too -->
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="doodle-layer" aria-hidden="true">
+    <svg class="pixel-sun" viewBox="0 0 140 140">
+      <path class="sun-body" d="M45 5h50v10h15v10h10v15h10v60h-10v15h-10v10H95v10H45v-10H30v-10H20v-15H10V40h10V25h10V15h15Z"/>
+      <path class="sun-shadow" d="M120 40h10v60h-10v15h-10v10H95v10H55v-10h35v-10h15v-15h10V50h5Z"/>
+      <path class="sun-glow" d="M45 30h50v10h10v60H95v10H45v-10H35V40h10Z"/>
+      <path class="sun-highlight" d="M42 28h28v9H42ZM31 39h10v28H31ZM76 39h13v8H76Z"/>
+      <path class="sun-outline" d="M45 5h50v10h15v10h10v15h10v60h-10v15h-10v10H95v10H45v-10H30v-10H20v-15H10V40h10V25h10V15h15Z"/>
+    </svg>
+    <svg class="pixel-mountains" viewBox="0 0 1000 400" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="far-mountain" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#eef2f8"/><stop offset="1" stop-color="#cbd5e3"/>
+        </linearGradient>
+        <linearGradient id="distant-mountain" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#d7deea"/><stop offset="1" stop-color="#9dabc0"/>
+        </linearGradient>
+        <linearGradient id="near-mountain" x1="0" y1="0" x2="0.85" y2="1">
+          <stop offset="0" stop-color="#aebdd1"/><stop offset="0.55" stop-color="#8195b0"/><stop offset="1" stop-color="#61758f"/>
+        </linearGradient>
+      </defs>
+      <path class="mountain-far" fill="url(#far-mountain)" d="M-40 400 24 327 77 349 128 296 176 325 240 251 292 302 348 269 399 310 466 238 516 291 572 257 631 306 690 230 739 280 790 249 848 303 905 242 1040 344V400Z"/>
+      <path class="mountain-far far-two" fill="url(#far-mountain)" d="M-30 400 92 284 150 329 219 259 276 315 351 225 415 299 479 264 538 318 611 239 668 302 746 216 809 289 869 253 1030 340V400Z"/>
+      <path class="mountain-back" fill="url(#distant-mountain)" d="M-30 400 40 328 96 350 171 268 219 304 304 190 352 235 421 288 486 220 532 269 611 169 657 226 714 275 785 205 832 252 887 225 1030 358V400Z"/>
+      <path class="mountain-front" fill="url(#near-mountain)" d="M-35 400 85 335 151 290 207 317 276 236 319 254 401 112 447 181 491 217 540 277 591 245 649 151 693 202 728 242 776 278 837 196 879 239 925 288 1035 350V400Z"/>
+      <path class="snow" d="M319 254 401 112 447 181 425 172 406 199 390 169 369 214 348 205ZM591 245 649 151 693 202 675 194 659 216 645 188 625 225 610 218ZM776 278 837 196 879 239 860 232 846 251 831 224 812 260 796 253Z"/>
+      <path class="mountain-shadow" d="M401 112 447 181 491 217 540 277 468 259 425 217ZM649 151 693 202 728 242 776 278 708 256 675 221ZM837 196 879 239 925 288 870 269 850 238Z"/>
+      <path class="mountain-detail" d="M401 199 374 247 350 285M425 217 453 254 474 310M649 216 621 267 604 311M675 221 701 265 724 315M831 254 806 299M860 250 886 292"/>
+      <path class="mountain-highlight" d="M304 190 277 233M401 112 371 166M486 220 462 253M611 169 584 210M785 205 760 242M120 185 94 231M286 215 260 258M916 242 891 281"/>
+      <path class="side-mountains" d="M-55 400 4 336 39 352 91 279 126 308 176 233 211 272 258 329 305 400ZM704 400 750 341 785 357 830 291 865 318 916 242 951 279 1004 331 1055 400Z"/>
+      <path class="left-mountains-extra" d="M-70 400-28 330 5 352 48 275 77 310 120 185 151 244 190 322 226 400ZM90 400 138 338 174 360 216 270 246 306 286 215 316 270 360 345 405 400Z"/>
+      <path class="side-snow" d="M91 279 126 308 114 303 103 317 92 296 81 313 68 309ZM916 242 951 279 938 272 927 288 916 261 904 282 891 277Z"/>
+      <path class="left-extra-snow" d="M120 185 151 244 140 235 130 254 120 216 108 246 96 238ZM286 215 316 270 305 262 295 280 285 243 273 273 260 265Z"/>
+      <path class="side-shadows" d="M126 308 176 233 211 272 258 329 224 315 190 282 164 311ZM951 279 1004 331 1055 400H951Z"/>
+      <path class="game-ridges" d="M39 352 56 374M92 296 70 340M126 308 145 337M211 272 229 302M750 341 769 367M830 291 810 334M865 318 882 346M951 279 970 309"/>
+      <path class="left-extra-ridges" d="M48 275 65 321M120 216 88 286M151 244 177 292M216 270 194 325M286 243 260 302M316 270 340 324"/>
+    </svg>
+    <svg class="pixel-cloud cloud-one" viewBox="0 0 240 120">
+      <defs>
+        <linearGradient id="cloud-gradient-one" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.45" stop-color="#f5fbff"/>
+          <stop offset="0.68" stop-color="#b5d5e5"/>
+          <stop offset="1" stop-color="#76a9c3"/>
+        </linearGradient>
+      </defs>
+      <path class="cloud-body" fill="url(#cloud-gradient-one)" d="M35 104Q14 104 12 86V73Q14 55 35 54H43V46Q45 28 66 28H91Q105 29 112 43 121 29 138 27H158Q180 30 184 51H200Q224 53 227 75V88Q225 103 205 105H184Q169 114 150 106 132 116 111 106 91 114 73 106H51Q43 106 35 104Z"/>
+      <path class="cloud-pixel-shadow" d="M158 27h18v10h10v12h15v10h13v14h13v16h-9v10h-14v7h-20v5h-18v-9h18v-6h17v-9h9V76h-10V63h-14V52h-14V40h-14ZM35 94h20v7h19v5h18v-5h18v6h20v-5h19v7h-19v5h-20v-5H92v5H72v-6H51v-5H35Z"/>
+      <path class="cloud-pixel-highlight" d="M152 32h15v9h11v11h12v11h10v12h-9V66h-12V55h-12V44h-15Z"/>
+      <path class="cloud-pixel-arc" d="M56 86V75h9v-9h10v-7h12v-7h16v6h13v8h10v9h8v12h-9V78h-8v-8h-12v-6H90v6H78v7H68v9Z"/>
+    </svg>
+    <svg class="pixel-cloud cloud-two" viewBox="0 0 240 120">
+      <defs>
+        <linearGradient id="cloud-gradient-two" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.45" stop-color="#f5fbff"/>
+          <stop offset="0.68" stop-color="#b5d5e5"/>
+          <stop offset="1" stop-color="#76a9c3"/>
+        </linearGradient>
+      </defs>
+      <path class="cloud-body" fill="url(#cloud-gradient-two)" d="M35 104Q14 104 12 86V73Q14 55 35 54H43V46Q45 28 66 28H91Q105 29 112 43 121 29 138 27H158Q180 30 184 51H200Q224 53 227 75V88Q225 103 205 105H184Q169 114 150 106 132 116 111 106 91 114 73 106H51Q43 106 35 104Z"/>
+      <path class="cloud-pixel-shadow" d="M158 27h18v10h10v12h15v10h13v14h13v16h-9v10h-14v7h-20v5h-18v-9h18v-6h17v-9h9V76h-10V63h-14V52h-14V40h-14ZM35 94h20v7h19v5h18v-5h18v6h20v-5h19v7h-19v5h-20v-5H92v5H72v-6H51v-5H35Z"/>
+      <path class="cloud-pixel-highlight" d="M152 32h15v9h11v11h12v11h10v12h-9V66h-12V55h-12V44h-15Z"/>
+      <path class="cloud-pixel-arc" d="M56 86V75h9v-9h10v-7h12v-7h16v6h13v8h10v9h8v12h-9V78h-8v-8h-12v-6H90v6H78v7H68v9Z"/>
+    </svg>
+    <svg class="pixel-cloud cloud-three" viewBox="0 0 240 120">
+      <defs>
+        <linearGradient id="cloud-gradient-three" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.45" stop-color="#f5fbff"/>
+          <stop offset="0.68" stop-color="#b5d5e5"/>
+          <stop offset="1" stop-color="#76a9c3"/>
+        </linearGradient>
+      </defs>
+      <path class="cloud-body" fill="url(#cloud-gradient-three)" d="M35 104Q14 104 12 86V73Q14 55 35 54H43V46Q45 28 66 28H91Q105 29 112 43 121 29 138 27H158Q180 30 184 51H200Q224 53 227 75V88Q225 103 205 105H184Q169 114 150 106 132 116 111 106 91 114 73 106H51Q43 106 35 104Z"/>
+      <path class="cloud-pixel-shadow" d="M158 27h18v10h10v12h15v10h13v14h13v16h-9v10h-14v7h-20v5h-18v-9h18v-6h17v-9h9V76h-10V63h-14V52h-14V40h-14ZM35 94h20v7h19v5h18v-5h18v6h20v-5h19v7h-19v5h-20v-5H92v5H72v-6H51v-5H35Z"/>
+      <path class="cloud-pixel-highlight" d="M152 32h15v9h11v11h12v11h10v12h-9V66h-12V55h-12V44h-15Z"/>
+      <path class="cloud-pixel-arc" d="M56 86V75h9v-9h10v-7h12v-7h16v6h13v8h10v9h8v12h-9V78h-8v-8h-12v-6H90v6H78v7H68v9Z"/>
+    </svg>
+    <svg class="pixel-cloud cloud-four" viewBox="0 0 240 120">
+      <defs>
+        <linearGradient id="cloud-gradient-four" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.45" stop-color="#f5fbff"/>
+          <stop offset="0.68" stop-color="#b5d5e5"/>
+          <stop offset="1" stop-color="#76a9c3"/>
+        </linearGradient>
+      </defs>
+      <path class="cloud-body" fill="url(#cloud-gradient-four)" d="M35 104Q14 104 12 86V73Q14 55 35 54H43V46Q45 28 66 28H91Q105 29 112 43 121 29 138 27H158Q180 30 184 51H200Q224 53 227 75V88Q225 103 205 105H184Q169 114 150 106 132 116 111 106 91 114 73 106H51Q43 106 35 104Z"/>
+      <path class="cloud-pixel-shadow" d="M158 27h18v10h10v12h15v10h13v14h13v16h-9v10h-14v7h-20v5h-18v-9h18v-6h17v-9h9V76h-10V63h-14V52h-14V40h-14ZM35 94h20v7h19v5h18v-5h18v6h20v-5h19v7h-19v5h-20v-5H92v5H72v-6H51v-5H35Z"/>
+      <path class="cloud-pixel-highlight" d="M152 32h15v9h11v11h12v11h10v12h-9V66h-12V55h-12V44h-15Z"/>
+      <path class="cloud-pixel-arc" d="M56 86V75h9v-9h10v-7h12v-7h16v6h13v8h10v9h8v12h-9V78h-8v-8h-12v-6H90v6H78v7H68v9Z"/>
+    </svg>
+    <svg class="pixel-cloud cloud-five" viewBox="0 0 240 120">
+      <defs>
+        <linearGradient id="cloud-gradient-five" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.45" stop-color="#f5fbff"/>
+          <stop offset="0.68" stop-color="#b5d5e5"/>
+          <stop offset="1" stop-color="#76a9c3"/>
+        </linearGradient>
+      </defs>
+      <path class="cloud-body" fill="url(#cloud-gradient-five)" d="M35 104Q14 104 12 86V73Q14 55 35 54H43V46Q45 28 66 28H91Q105 29 112 43 121 29 138 27H158Q180 30 184 51H200Q224 53 227 75V88Q225 103 205 105H184Q169 114 150 106 132 116 111 106 91 114 73 106H51Q43 106 35 104Z"/>
+      <path class="cloud-pixel-shadow" d="M158 27h18v10h10v12h15v10h13v14h13v16h-9v10h-14v7h-20v5h-18v-9h18v-6h17v-9h9V76h-10V63h-14V52h-14V40h-14ZM35 94h20v7h19v5h18v-5h18v6h20v-5h19v7h-19v5h-20v-5H92v5H72v-6H51v-5H35Z"/>
+      <path class="cloud-pixel-highlight" d="M152 32h15v9h11v11h12v11h10v12h-9V66h-12V55h-12V44h-15Z"/>
+      <path class="cloud-pixel-arc" d="M56 86V75h9v-9h10v-7h12v-7h16v6h13v8h10v9h8v12h-9V78h-8v-8h-12v-6H90v6H78v7H68v9Z"/>
+    </svg>
+    <svg class="pixel-cloud cloud-six" viewBox="0 0 240 120">
+      <defs>
+        <linearGradient id="cloud-gradient-six" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.45" stop-color="#f5fbff"/>
+          <stop offset="0.68" stop-color="#b5d5e5"/>
+          <stop offset="1" stop-color="#76a9c3"/>
+        </linearGradient>
+      </defs>
+      <path class="cloud-body" fill="url(#cloud-gradient-six)" d="M35 104Q14 104 12 86V73Q14 55 35 54H43V46Q45 28 66 28H91Q105 29 112 43 121 29 138 27H158Q180 30 184 51H200Q224 53 227 75V88Q225 103 205 105H184Q169 114 150 106 132 116 111 106 91 114 73 106H51Q43 106 35 104Z"/>
+      <path class="cloud-pixel-shadow" d="M158 27h18v10h10v12h15v10h13v14h13v16h-9v10h-14v7h-20v5h-18v-9h18v-6h17v-9h9V76h-10V63h-14V52h-14V40h-14ZM35 94h20v7h19v5h18v-5h18v6h20v-5h19v7h-19v5h-20v-5H92v5H72v-6H51v-5H35Z"/>
+      <path class="cloud-pixel-highlight" d="M152 32h15v9h11v11h12v11h10v12h-9V66h-12V55h-12V44h-15Z"/>
+      <path class="cloud-pixel-arc" d="M56 86V75h9v-9h10v-7h12v-7h16v6h13v8h10v9h8v12h-9V78h-8v-8h-12v-6H90v6H78v7H68v9Z"/>
+    </svg>
+    <svg class="splat-puzzle" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+      <defs>
+        <filter id="wobbly-puzzle" x="-8%" y="-8%" width="116%" height="116%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="19" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>
+      <g filter="url(#wobbly-puzzle)">
+        <path fill="#ffd0df" d="M-60-60H250V250H-60Z"/><path fill="#c9e7ff" d="M250-60H500V250H250Z"/><path fill="#d8f3ce" d="M500-60H750V250H500Z"/><path fill="#ffe5a8" d="M750-60H1060V250H750Z"/>
+        <path fill="#dacbff" d="M-60 250H250V500H-60Z"/><path fill="#bdeee5" d="M250 250H500V500H250Z"/><path fill="#ffccec" d="M500 250H750V500H500Z"/><path fill="#c8dcff" d="M750 250H1060V500H750Z"/>
+        <path fill="#ffe8a8" d="M-60 500H250V750H-60Z"/><path fill="#c8f0d7" d="M250 500H500V750H250Z"/><path fill="#d9c8ff" d="M500 500H750V750H500Z"/><path fill="#ffd1c2" d="M750 500H1060V750H750Z"/>
+        <path fill="#bee9ff" d="M-60 750H250V1060H-60Z"/><path fill="#ffd2e4" d="M250 750H500V1060H250Z"/><path fill="#fff0ad" d="M500 750H750V1060H500Z"/><path fill="#bdebdc" d="M750 750H1060V1060H750Z"/>
+      </g>
+      <g class="puzzle-lines" filter="url(#wobbly-puzzle)">
+        <path d="M250-60V1060M500-60V1060M750-60V1060M-60 250H1060M-60 500H1060M-60 750H1060"/>
+      </g>
+    </svg>
+    <i class="splat splat-one"></i>
+    <i class="splat splat-two"></i>
+    <i class="splat splat-three"></i>
+    <i class="splat splat-four"></i>
+    <i class="splat splat-five"></i>
+    <i class="splat splat-six"></i>
+    <i class="splat splat-seven"></i>
+    <i class="splat splat-eight"></i>
+    <i class="splat splat-nine"></i>
+    <i class="splat splat-ten"></i>
+    <span class="doodle d1">⚛</span>
+    <span class="doodle d2">✦</span>
+    <span class="doodle d3">⌁</span>
+    <span class="doodle d4">★</span>
+    <span class="doodle d5">⚙</span>
+    <span class="doodle d6">✿</span>
+    <span class="doodle d7">↯</span>
+    <span class="doodle d8">∞</span>
+    <span class="doodle d9">✧</span>
+    <span class="doodle d10">☄</span>
+    <span class="doodle d11">∑</span>
+    <span class="doodle d12">⌘</span>
+    <span class="doodle d13">◌</span>
+    <span class="doodle d14">✎</span>
+    <span class="doodle d15">{ }</span>
+    <span class="doodle d16">∆</span>
+    <span class="doodle d17">✦</span>
+    <span class="doodle d18">π</span>
+    <span class="doodle d19">☻</span>
+    <span class="doodle d20">≈</span>
+    <span class="doodle d21">✹</span>
+    <span class="doodle d22">&lt;/&gt;</span>
+    <span class="doodle d23">⚡</span>
+    <span class="doodle d24">✽</span>
+    <span class="doodle d25">→</span>
+    <span class="doodle d26">◎</span>
+    <span class="doodle d27">#</span>
+    <span class="doodle d28">✦</span>
+    <span class="doodle d29">√</span>
+    <span class="doodle d30">☀</span>
+  </div>
+
+  <main>
+
+    <section id="hero">
+      <svg class="pokedex-border" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M3 14H350L400 63 430 70 470 105H997V679L970 697H30L3 672Z"/>
+      </svg>
+      <div class="pokedex-lights" aria-hidden="true">
+        <span class="pokedex-lens"></span>
+        <span class="status-light red"></span>
+        <span class="status-light yellow"></span>
+        <span class="status-light green"></span>
+      </div>
+      <div class="hero-copy">
+        <div class="screen-pages">
+          <div class="screen-page active">
+            <p class="hero-description">
+              I enjoy exploring computer science, robotics, and engineering through hands-on projects and internships.
+            </p>
+          </div>
+          <div class="screen-page">
+            <p class="eyebrow">More About Me</p>
+            <p class="hero-description">
+              I love learning how technology works, building creative solutions, and using what I learn to make STEM more accessible and fun for others.
+            </p>
+          </div>
+        </div>
+        <button class="next-screen" type="button">Next ▶</button>
+        <div class="hero-actions">
+          <a class="button" href="#projects">See My Involvements</a>
+          <a class="button button-secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="pokedex-left">
+        <label class="portrait-placeholder" aria-label="Choose a profile photo">
+          <input type="file" accept="image/*">
+          <span class="photo-screen"></span>
+        </label>
+        <div class="left-controls" aria-label="Decorative Pokédex controls">
+          <button class="round-control" type="button" aria-label="Pokédex action button"></button>
+          <span class="mini-control red-control"></span>
+          <span class="mini-control green-control"></span>
+          <span class="speaker" aria-hidden="true"></span>
+          <span class="mini-display">TRAINER: <strong>ARMSTRONG LIAN</strong><br>STATUS: HIGH SCHOOL SENIOR</span>
+          <span class="d-pad" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos">
+      <h2>Snapshots</h2>
+      <p>A few moments from my projects, internships, and adventures.</p>
+      <div class="photo-grid">
+        <label class="photo-placeholder">
+          <input type="file" accept="image/*">
+          <span aria-hidden="true">+</span>
+          <strong>Project photo</strong>
+        </label>
+        <label class="photo-placeholder">
+          <input type="file" accept="image/*">
+          <span aria-hidden="true">+</span>
+          <strong>Internship photo</strong>
+        </label>
+        <label class="photo-placeholder">
+          <input type="file" accept="image/*">
+          <span aria-hidden="true">+</span>
+          <strong>Favorite photo</strong>
+        </label>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <!-- replace this paragraph with 2-3 sentences about yourself -->
+      <p>
+        Hi! My name is Armstrong Lian, and I am a rising senior at North Crowley High School. 
+        I am interested in computer science and programming, and I enjoy exploring different topics and fields of technology while 
+        expanding my skills and building fun projects!
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Involvements</h2>
+      <div class="project-grid">
+        <!-- three project cards: put in your own titles, descriptions, and links -->
+        <article class="card">
+          <h3>FLIPS</h3>
+          <p>Built a free STEM camp for underrepresented children.</p>
+          <!-- the link is optional, delete the line if there is nothing to link -->
+          <a href="https://www.youtube.com/watch?v=STIdpTW5tXI" target="_blank">Watch the video</a>
+        </article>
+        <article class="card">
+          <h3>CS@Mines Internship</h3>
+          <p>Interned under Professor Kaveh at Colorado School of Mines, learning all about robotics.</p>
+          <a href="#">See it here</a>
+        </article>
+        <article class="card">
+          <h3>Lockheed Martin Internship</h3>
+          <p>Interned at Lockheed Martin, gaining experience in project management and engineering.</p>
+          <a href="#">See it here</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <h2>Contact</h2>
+    <!-- put your GitHub username in this link -->
+    <p>Find me on <a href="https://github.com/ArmstrongL1">GitHub</a>.</p>
+    <!-- this credit line is optional, keep it or delete it -->
+    <p class="fine-print">Built with Codex at CS@Mines.</p>
+  </footer>
+
+  <script>
+    const screenPages = document.querySelectorAll('.screen-page');
+    const nextScreenButton = document.querySelector('.next-screen');
+    let activeScreenPage = 0;
+
+    nextScreenButton.addEventListener('click', () => {
+      screenPages[activeScreenPage].classList.remove('active');
+      activeScreenPage = activeScreenPage === 0 ? 1 : 0;
+      screenPages[activeScreenPage].classList.add('active');
+      nextScreenButton.textContent = activeScreenPage === 0 ? 'Next ▶' : '◀ Back';
+    });
+
+    document.querySelector('.portrait-placeholder input').addEventListener('change', (event) => {
+      const input = event.currentTarget;
+      const file = input.files[0];
+      if (!file) return;
+
+      const placeholder = input.closest('.portrait-placeholder');
+      const oldPhoto = placeholder.dataset.photoUrl;
+      if (oldPhoto) URL.revokeObjectURL(oldPhoto);
+
+      const photoUrl = URL.createObjectURL(file);
+      placeholder.dataset.photoUrl = photoUrl;
+      placeholder.querySelector('.photo-screen').style.backgroundImage = `url("${photoUrl}")`;
+      placeholder.classList.add('has-photo');
+    });
+
+    document.querySelectorAll('.photo-placeholder input').forEach((input) => {
+      input.addEventListener('change', () => {
+        const file = input.files[0];
+        if (!file) return;
+
+        const placeholder = input.closest('.photo-placeholder');
+        const oldPhoto = placeholder.dataset.photoUrl;
+        if (oldPhoto) URL.revokeObjectURL(oldPhoto);
+
+        const photoUrl = URL.createObjectURL(file);
+        placeholder.dataset.photoUrl = photoUrl;
+        placeholder.style.backgroundImage = `url("${photoUrl}")`;
+        placeholder.classList.add('has-photo');
+        placeholder.querySelector('strong').textContent = 'Change photo';
+      });
+    });
+  </script>
+
+</body>
 </html>
